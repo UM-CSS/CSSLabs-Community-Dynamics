@@ -7,8 +7,8 @@ from sklearn.utils import shuffle
 import ipyparallel
 import os
 import sys
-sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics')
-sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/politeness')
+sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/data_prep')
+sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/data_prep/politeness')
 
 from politeness.scripts.format_input import format_doc
 from politeness.model import score
@@ -26,8 +26,8 @@ def process_df(df):
     import numpy as np
     from tqdm import tqdm
     
-    sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics')
-    sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/politeness')
+    sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/data_prep')
+    sys.path.append('/home/jwlock/research/reddit/CSSLabs_Community_Dynamics/data_prep/politeness')
 
     from politeness.scripts.format_input import format_doc
     from politeness.model import score
@@ -70,11 +70,12 @@ def get_files_by_file_size(dirname, reverse=False):
 def get_jobs():
     jobs = []
     
-    files = get_files_by_file_size('../sampled', reverse=False)
-    if 'TwoXChromosomes.tsv' in files:
-        files.remove('TwoXChromosomes.tsv')
-        files.insert(0, 'TwoXChromosomes.tsv')
-    done = os.listdir('data/politeness/')
+    files= get_files_by_file_size('../../sampled')
+    
+    #if 'TwoXChromosomes.tsv' in files:
+    #    files.remove('TwoXChromosomes.tsv')
+    #    files.insert(0, 'TwoXChromosomes.tsv')
+    done = os.listdir('../data/politeness/')
     
     for f in files:
         if f.endswith('tsv'):
@@ -102,7 +103,7 @@ jobs = get_jobs()
 while len(jobs)>0:
     j = jobs[0]
     print('Working on', j['subreddit'])
-    part = 'data/politeness/'+j['subreddit']+'.part'
+    part = '../data/politeness/'+j['subreddit']+'.part'
     l = 0
     finished = 0
     
@@ -142,7 +143,7 @@ while len(jobs)>0:
             if i % 10 == 0:
                 checkpoint(df=df, part=part)
 
-    df.to_csv('data/'+j['subreddit']+'.tsv', sep='\t', index=False)
+    df.to_csv('../data/politeness/'+j['subreddit']+'.tsv', sep='\t', index=False)
     jobs = get_jobs()
     
 print('Done!')
