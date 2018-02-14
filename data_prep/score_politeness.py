@@ -72,9 +72,9 @@ def get_jobs():
     
     files= get_files_by_file_size('../../sampled')
     
-    #if 'TwoXChromosomes.tsv' in files:
-    #    files.remove('TwoXChromosomes.tsv')
-    #    files.insert(0, 'TwoXChromosomes.tsv')
+    if 'TwoXChromosomes.tsv' in files:
+        files.remove('TwoXChromosomes.tsv')
+        files.insert(0, 'TwoXChromosomes.tsv')
     done = os.listdir('../data/politeness/')
     
     for f in files:
