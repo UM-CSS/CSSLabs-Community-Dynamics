@@ -5,8 +5,8 @@
 1. [Enviornment Setup](#setup)
 2. [Using Lab Exercises](use)
     - [Short Summaries of each Lab](#summary)
-    - [Lab 0: Intro to python & text](#zero)
-    - [Lab 1: Data munging](#one)
+    - [Lab 0: Intro to Reddit data and trends](#zero)
+    - [Lab 1: Evolving community dynamics](#one)
 3. [Suggested Readings](#readings)
 4. [License](#license)    
 
@@ -68,7 +68,8 @@ You will need some software to be able to run this code. We recommend the follow
 
 #### Academic publications
 - Palmer, Alexis, Melissa Robinson, and Kristy Philips. 2017. “[Illegal Is Not a Noun: Linguistic Form for Detection of Pejorative Nominalizations](http://www.aclweb.org/anthology/W17-3014).” Pp. 91–100 in *Proceedings of the First Workshop on Abusive Language Online.* Vancouver.
-- anescu-Niculescu-Mizil, Cristian, et al. 2013. "[A computational approach to politeness with application to social factors](https://www.cs.cornell.edu/~cristian/Politeness.html)." *Proceedings of ACL*.
+- Danescu-Niculescu-Mizil, Cristian, et al. 2013. "[A computational approach to politeness with application to social factors](https://www.cs.cornell.edu/~cristian/Politeness.html)." *Proceedings of ACL*.
+- Chandrasekharan, Eshwar. 2017. "[You Can't Stay Here: The Efficacy of Reddit's 2015 Ban Examined Through Hate Speech](https://dl.acm.org/citation.cfm?id=3171581.3134666)." *Proceedings of the ACM on Human-Computer Interaction*, Volume 1 Issue CSCW. 
 
 
 ## License <a name="license"></a> 
