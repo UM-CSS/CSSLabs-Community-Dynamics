@@ -34,16 +34,27 @@ def process_df(df):
     
     def get_politeness(txt):
         txt = str(txt)
-        ps = []
-        try:
-            fs = format_doc(txt)
-           
-            for f in fs:
-                ps.append(score(f)['polite'])
-        except:
-            with open('errors.txt', 'a') as o:
-                o.write("\nSomething's broken with this:" + txt + "\n")
-        return np.mean(ps)
+        output = np.nan
+        if len(txt) == 0:
+            pass
+        elif txt == 'nan':
+            pass
+        elif txt == '[deleted]':
+            pass
+        elif txt == '[removed]':
+            pass
+        else:
+            ps = []
+            try:
+                fs = format_doc(txt)
+                for f in fs:
+                    ps.append(score(f)['polite'])
+                output = np.mean(ps)
+            except:
+                with open('errors.txt', 'a') as o:
+                    o.write("\nSomething's broken with this:" + txt + "\n")
+            
+        return output
     
     df['politeness'] = df.body.apply(get_politeness)
         
