@@ -20,6 +20,8 @@ To use these labs, you will need to download the code and the data.
     - Press the ![Clone or download](images/clone_or_download.png "Clone or download") button on the right side of each repository.
     - Choose `Download ZIP` and save the file somewhere memorable.
     - Go to where the file is saved and unzip it.
+- Some data for this lab are too large for git. You can download the files here:
+    - https://drive.google.com/drive/folders/1umLuVqSMrOgtMVz4ygtHrjmdKPxxkIO3?usp=sharing
 
 ## 1. Environment Setup <a name="setup"></a>
 You will need some software to be able to run this code. We recommend the following:
