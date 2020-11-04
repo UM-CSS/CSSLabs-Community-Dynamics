@@ -1,0 +1,3 @@
+[submodule "data_prep/politeness"] 
+  path = data_prep/politeness 
+  url = git://github.com/meyersbs/politeness
