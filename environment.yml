@@ -1,0 +1,9 @@
+name: community-environment
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - pandas
+  - matplotlib
+  - urllib3
+  - numpy
